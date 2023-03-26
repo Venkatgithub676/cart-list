@@ -1,0 +1,36 @@
+/* Write your CSS here */
+.summary-container {
+  align-self: flex-end;
+}
+
+.summary-heading {
+  font-family: 'roboto';
+  color: #616e7c;
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+.summary-heading-span {
+  font-family: 'roboto';
+  color: #171f46;
+  font-size: 30px;
+}
+
+.summary-para {
+  color: #616e7c;
+  font-family: 'roboto';
+  margin-top: 5px;
+}
+
+.checkout-btn {
+  width: 100%;
+  font-family: 'roboto';
+  background-color: #0b69ff;
+  font-weight: 500;
+  color: #ffffff;
+  border: none;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 17px;
+  cursor: pointer;
+}
