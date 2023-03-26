@@ -22,19 +22,20 @@ class App extends Component {
   addCartItem = product => {
     const {cartList} = this.state
     const itemFound = cartList.find(each => each.id === product.id)
-    const itemFoundIndex = cartList.findIndex(each => each.id === product.id)
-    this.setState(() => {
-      if (itemFound === undefined) {
-        return {
-          cartList: [product],
-        }
-      } //   TODO: Update the code here to implement addCartItem
+    if (itemFound === undefined) {
+      this.setState({
+        cartList: [product],
+      })
+      console.log(cartList)
+    } //   TODO: Update the code here to implement addCartItem
+    else {
       let {quantity} = product
       quantity += 1
-      cartList.splice(itemFoundIndex, 1, {...product, quantity})
-      console.log(cartList)
-      return {cartList}
-    })
+      const itemFound1 = cartList.findIndex(each => each.id === product.id)
+      cartList.splice(itemFound1, 1, {...product, quantity})
+      console.log(quantity, itemFound1, cartList)
+      this.setState({cartList})
+    }
   }
 
   removeCartItem = id => {
